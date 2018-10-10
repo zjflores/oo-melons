@@ -48,10 +48,12 @@ class DomesticMelonOrder(AbstractMelonOrder):
 class InternationalMelonOrder(AbstractMelonOrder):
 	"""An international (non-US) melon order."""
 
-	# def add_shipping_fee(self):
-	# 	if super().qty < 10:
-	# 		total = super().get_total(self) + 3
-	# 		return total
+	# use super.init
+
+	def add_shipping_fee(self):
+		if super().qty < 10:
+			total = super().get_total(self) + 3
+			return total
 
 class GovernmentMelonOrder(AbstractMelonOrder):
 	"""Removes tax for government orders"""
