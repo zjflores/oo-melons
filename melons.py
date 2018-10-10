@@ -53,3 +53,6 @@ class InternationalMelonOrder(AbstractMelonOrder):
 	# 		total = super().get_total(self) + 3
 	# 		return total
 
+class GovernmentMelonOrder(AbstractMelonOrder):
+	"""Removes tax for government orders"""
+
